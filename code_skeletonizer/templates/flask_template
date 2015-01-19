@@ -1,0 +1,9 @@
+from Flask import render_template, request
+
+config_obj = {"a": True, "b": False}
+app = Flask(config_obj)
+
+@app.route("/app_root/url/end/<some_arg>", methods=["GET", "POST"])
+def my_function(some_arg):
+    return "w00t"
+

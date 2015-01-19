@@ -1,0 +1,55 @@
+function import(f){
+    lines[n1++] = "########### " f " ################"
+    while(getline x < f > 0){
+        if(x ~ /^import/ || x ~ /^from.*import/){
+            imports[n2++] = x
+        }else{
+            lines[n1++] = x
+        }
+    }
+    lines[n1++] = ""
+}
+
+function show_options(){
+    print "your options are: "
+    for(pattern in patterns){
+        print pattern
+    }
+}
+
+BEGIN{
+    n1 = 0
+    n2 = 0
+    screwed_up = 0
+    patterns["sqlite"] = "templates/sqlite_template"
+    patterns["flask"] = "templates/flask_template"
+    patterns["requests-get"] = "templates/requests_get_template"
+}
+
+{
+    found = 0
+    for(pattern in patterns){
+        if($1 ~ pattern){
+            import(patterns[pattern])
+            found = 1
+        }
+    }
+    if(found == 0){
+        print "couldnt find anything related to " $1
+        show_options()
+        screwed_up = 1
+    }
+}
+
+END{
+    if(screwed_up == 0){
+        for(i in imports){
+            print imports[i]
+        }
+        print ""
+        print ""
+        for(j = 0; j < n1; j++){
+            print lines[j]
+        }
+    }
+}
