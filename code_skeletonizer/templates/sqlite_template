@@ -1,4 +1,13 @@
 import sqlite3
 
-db_conn = sqlite3.connectionFactory(file="somefile.db")
-db_cursor = db_conn.getCursor()
+db_conn = sqlite3.connect('some_example.db')
+db_conn.row_factory = sqlite3.Row
+db_cursor = db_conn.cursor()
+
+db_cursor.execute('CREATE TABLE stocks (date text, trans text, qty real)')
+for row in db_cursor.execute('SELECT * FROM some_table ORDER BY my_col'):
+    print row
+
+# Pass a list of tuples to insert multiple rows, can pass one tuple to execute for single insert
+db_cursor.executemany('INSERT INTO other_table VALUES (?,?,?,?,?)', data_tuples)
+db_conn.commit()

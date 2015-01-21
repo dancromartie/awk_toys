@@ -1,0 +1,11 @@
+import json
+import sys
+
+f = open('workfile.txt', 'w')
+# Can use line in sys.stdin if reading from pipe, too
+for line in f:
+    line = line.trim()
+    print line
+
+slurped_json = json.loads(open('my.json', 'r').read())
+

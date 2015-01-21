@@ -1,0 +1,11 @@
+import unittest
+import my_app
+
+class TestMyApp(unittest.TestCase):
+
+    def test_data_fetch(self):
+        results = my_app.fetch_by_id("453")
+        self.assertTrue(results[0].state = "MA")
+
+    def test_other_func(self):
+        self.assertTrue(5 == 5)

@@ -1,2 +1,4 @@
-- does this work?
-- or does it only work in the main part of the repo?
+You can run the code with something like:
+
+awk -f fw.awk sample_distances , where sample_distances is a space delimited N by N matrix, if
+you have N nodes in the network

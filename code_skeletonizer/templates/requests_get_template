@@ -1,4 +1,0 @@
-import requests
-import json
-
-requests.get("http://some_url", data=json.dumps(some_dict))
