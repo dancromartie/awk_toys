@@ -31,7 +31,7 @@ I hope to add stuff for JS (the most painful setup-wise for me), shell scripts, 
 Entering something it doesn't know about will tell you the available options:
 
 ```
-08:18 PM [.../awk_toys/code_skeletonizer] $ awk -f skeletonize 
+08:18 PM [.../awk_toys/code_skeletonizer] $ awk -f skeletonize.awk
 asdfklasdfkjdsaf
 Couldnt find anything related to asdfklasdfkjdsaf
 Your options are: 
@@ -48,7 +48,7 @@ Since it will just wait for STDIN, you can either pass a file of options to the 
 you can enter them on the command line, and tell it you're done with a CTRL-d like below:
 
 ```
-08:22 PM [.../awk_toys/code_skeletonizer] $ awk -f skeletonize > python_starter_code        
+08:22 PM [.../awk_toys/code_skeletonizer] $ awk -f skeletonize.awk > python_starter_code        
 sqlite
 requests
 read_file
