@@ -1,3 +1,33 @@
+## Python Skeletonizer ##
+
+I write a lot of really little apps and prototypes of things, sometimes several in a day.
+
+I spend a lot of time copy pasting Python code from old projects because I can't remember exactly:
+ - how to set up an sqlite connection and what the multi-row insert function is called
+ - whether or not the requests library needs a JSON string or a dictionary for the GET parameters
+ - that unittest needs to have some class that inherits from some other class, and that tests have
+to start with "test"
+
+If I had a fancy IDE or Java etc, I might get some hints about some of these, but you would still
+have to do a lot of typing.  
+
+This lets me just do a real quick hit and run: "I have a project that needs an sqlite connection, is
+going to make some get requests, is going to have some Flask endpoints, and is going to use a python
+shelf".
+
+Does it take _that_ long to copy paste these things from online docs or from old projects?  No.  But
+sometimes there's a certain "activation energy" or motivational hump you have to get over before
+saying "hey, let me try that thing out that I've been thinking about all week".  
+
+Is it _that_  hard to go to the deli downstairs and buy an apple?  No, but you're 100X more likely
+to eat an apple if your company puts one in the kitchen 10ft away from your desk.  The interesting
+question is whether or not a developer would go 3 months without eating any fruit or if they would
+just spend extra time.  In my experience the former is more likely...
+
+-----
+
+## Usage ##
+
 Entering something it doesn't know about will tell you the available options:
 
 ```
@@ -85,3 +115,7 @@ class TestMyApp(unittest.TestCase):
     def test_other_func(self):
         self.assertTrue(5 == 5)
 ```
+
+## Configuration ##
+
+Of course, my templates probably aren't of much use to you.
