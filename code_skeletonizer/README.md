@@ -2,7 +2,7 @@
 
 I write a lot of really little apps and prototypes of things, sometimes several in a day.
 
-I spend a lot of time copy pasting Python code from old projects because I can't remember exactly:
+I'm often copy/pasting Python code from old projects because I can't remember exactly:
  - how to set up an sqlite connection and what the multi-row insert function is called
  - whether or not the requests library needs a JSON string or a dictionary for the GET parameters
  - that unittest needs to have some class that inherits from some other class, and that tests have
@@ -11,9 +11,9 @@ to start with "test"
 If I had a fancy IDE or Java etc, I might get some hints about some of these, but you would still
 have to do a lot of typing.  
 
-This lets me just do a real quick hit and run: "I have a project that needs an sqlite connection, is
-going to make some get requests, is going to have some Flask endpoints, and is going to use a python
-shelf".
+This AWK script lets me just do a real quick hit and run: "I have a project
+that needs an sqlite connection, is going to make some get requests, is going
+to have some Flask endpoints, and is going to use a python shelf".
 
 Does it take _that_ long to copy paste these things from online docs or from old projects?  No.  But
 sometimes there's a certain "activation energy" or motivational hump you have to get over before
@@ -121,7 +121,7 @@ class TestMyApp(unittest.TestCase):
 Of course, my templates probably aren't of much use to you. Your own organization will have its own
 proprietary stuff and its own use cases.
 
-There's a section in the script that you can modify.
+There's a section in the AWK script that you can modify.
 
 ```
 patterns["sqlite"] = "templates/sqlite_template"
@@ -131,4 +131,4 @@ patterns["pyunit"] = "templates/pyunit_template"
 patterns["read_file"] = "templates/read_file_template"
 ```
 
-This means "if regex /sqlite/ is passes, use the following template file".
+This means "if regex /sqlite/ passes, use the following template file".
