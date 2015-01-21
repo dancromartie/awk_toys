@@ -22,9 +22,9 @@ saying "hey, let me try that thing out that I've been thinking about all week".
 Is it _that_  hard to go to the deli downstairs and buy an apple?  No, but you're 100X more likely
 to eat an apple if your company puts one in the kitchen 10ft away from your desk.  The interesting
 question is whether or not a developer would go 3 months without eating any fruit or if they would
-just spend extra time.  In my experience the former is more likely...
+spend the extra time each day.  In my experience the former is more likely...
 
------
+I hope to add stuff for JS (the most painful setup-wise for me), shell scripts, and R some day.
 
 ## Usage ##
 
@@ -118,4 +118,17 @@ class TestMyApp(unittest.TestCase):
 
 ## Configuration ##
 
-Of course, my templates probably aren't of much use to you.
+Of course, my templates probably aren't of much use to you. Your own organization will have its own
+proprietary stuff and its own use cases.
+
+There's a section in the script that you can modify.
+
+```
+patterns["sqlite"] = "templates/sqlite_template"
+patterns["flask"] = "templates/flask_template"
+patterns["requests"] = "templates/requests_template"
+patterns["pyunit"] = "templates/pyunit_template"
+patterns["read_file"] = "templates/read_file_template"
+```
+
+This means "if regex /sqlite/ is passes, use the following template file".
