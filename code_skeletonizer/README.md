@@ -19,10 +19,13 @@ Does it take _that_ long to copy paste these things from online docs or from old
 sometimes there's a certain "activation energy" or motivational hump you have to get over before
 saying "hey, let me try that thing out that I've been thinking about all week".  
 
-Is it _that_  hard to go to the deli downstairs and buy an apple?  No, but you're 100X more likely
-to eat an apple if your company puts one in the kitchen 10ft away from your desk.  The interesting
-question is whether or not a developer would go 3 months without eating any fruit or if they would
-spend the extra time each day.  In my experience the former is more likely...
+As an analogy, many people go weeks without exercising.  They could do 1, 2,
+maybe even 3 minutes of exercise on a given day.  But, the most frequently
+chosen duration is 0 minutes. When they do exercise, they'll do it for an hour.
+It's often just about whether you were able to get started or not. Having
+something that makes it easy to get started can smooth out the activity over
+time, and can make it easier to squeeze in during some 30 minute opening in
+your increasingly fragmented day.
 
 I hope to add stuff for JS (the most painful setup-wise for me), shell scripts, and R some day.
 
