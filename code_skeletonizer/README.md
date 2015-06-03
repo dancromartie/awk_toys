@@ -31,20 +31,21 @@ I hope to add stuff for JS (the most painful setup-wise for me), shell scripts, 
 
 ## Usage ##
 
-Entering something it doesn't know about will tell you the available options:
-
 ```
 08:18 PM [.../awk_toys/code_skeletonizer] $ awk -f skeletonize.awk
-asdfklasdfkjdsaf
-Couldnt find anything related to asdfklasdfkjdsaf
 Your options are: 
 
+csv
 flask
-sqlite
-requests
-pyunit
 read_file
-^C
+requests
+selenium
+sqlite
+unittest
+
+***
+Hit ctrl+d to end input
+***
 ```
 
 Since it will just wait for STDIN, you can either pass a file of options to the script, or 

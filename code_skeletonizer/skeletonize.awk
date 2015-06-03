@@ -14,18 +14,31 @@ function import(f){
 function show_options(){
     print "Your options are: "
     print ""
+    i = 0
     for(pattern in patterns){
-        print pattern
+        names[i] = pattern
+        i = i + 1
     }
+    n = asort(names)
+    for(i = 1; i <= n; i++){
+        print names[i]
+    }
+    print "\n***"
+    print "Hit ctrl+d to end input"
+    print "***\n"
 }
 
 BEGIN{
     line_counter = 0
-    patterns["sqlite"] = "templates/sqlite_template"
+    out_file = "/tmp/awk_skeletonizer.out"
+    patterns["csv"] = "templates/csv_template"
     patterns["flask"] = "templates/flask_template"
-    patterns["requests"] = "templates/requests_template"
-    patterns["pyunit"] = "templates/pyunit_template"
     patterns["read_file"] = "templates/read_file_template"
+    patterns["requests"] = "templates/requests_template"
+    patterns["selenium"] = "templates/selenium_template"
+    patterns["sqlite"] = "templates/sqlite_template"
+    patterns["unittest"] = "templates/unittest_template"
+    show_options()
 }
 
 {
@@ -42,6 +55,7 @@ BEGIN{
         # An "exit 1" here would simply stop processing records and put us at END
         # So, just set a variable here, and exit at the beginning of END if set
         failed = 1
+        exit 1
     }
 }
 
@@ -50,14 +64,16 @@ END{
         exit 1
     }
     # Print all the import statements
+    print "Your output is in " out_file
+    print "########### made by awk skeletonizer ###########" > out_file
     for(i in imports){
-        print i
+        print i >> out_file
     }
     # Give it some space
     print ""
     print ""
     # Print the not-imports
     for(j = 0; j < line_counter; j++){
-        print lines[j]
+        print lines[j] >> out_file
     }
 }
